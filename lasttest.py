@@ -179,3 +179,5 @@ def run_length_encoding(s):
     encoding = ""
     i = 0
     while i
+
+    sdkfjsdfksdfkj1212212
