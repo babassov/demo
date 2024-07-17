@@ -1,0 +1,179 @@
+test file path vs file content
+
+import random
+const gh = "ghp_3RQddLnQJaoADUSvJdH3wAxlpAGpZF3Z9FC2";
+
+import string
+
+def random_string(length=10):
+    return ''.join(random.choice(string.ascii_letters) for _ in range(length))
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return None
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+
+    def __str__(self):
+        return f"{self.name} is a {self.species}"
+
+    def make_sound(self):
+        if self.species == "Dog":
+            return "Woof!"
+        elif self.species == "Cat":
+            return "Meow!"
+        else:
+            return "Unknown sound"
+
+animals = [Animal("Fido", "Dog"), Animal("Whiskers", "Cat"), Animal("Tweetie", "Bird")]
+
+for animal in animals:
+    print(animal)
+    print(animal.make_sound())
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def prime_numbers_up_to(n):
+    return [x for x in range(2, n) if is_prime(x)]
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+numbers = [random.randint(1, 100) for _ in range(10)]
+sorted_numbers = bubble_sort(numbers)
+print(f"Unsorted: {numbers}")
+print(f"Sorted: {sorted_numbers}")
+
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    return sum(1 for char in s if char in vowels)
+
+def reverse_string(s):
+    return s[::-1]
+
+def palindrome(s):
+    return s == s[::-1]
+
+def generate_matrix(rows, cols):
+    return [[random.randint(0, 10) for _ in range(cols)] for _ in range(rows)]
+
+matrix = generate_matrix(3, 3)
+for row in matrix:
+    print(row)
+
+def transpose_matrix(matrix):
+    return [list(row) for row in zip(*matrix)]
+
+transposed = transpose_matrix(matrix)
+for row in transposed:
+    print(row)
+
+def merge_dicts(dict1, dict2):
+    return {**dict1, **dict2}
+
+dict1 = {"a": 1, "b": 2}
+dict2 = {"c": 3, "d": 4}
+merged_dict = merge_dicts(dict1, dict2)
+print(merged_dict)
+
+def factorial_iterative(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+def unique_elements(lst):
+    return list(set(lst))
+
+def common_elements(lst1, lst2):
+    return list(set(lst1) & set(lst2))
+
+def flatten_list(lst):
+    return [item for sublist in lst for item in sublist]
+
+def nested_sum(lst):
+    return sum(sum(sublist) for sublist in lst)
+
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(flatten_list(nested_list))
+print(nested_sum(nested_list))
+
+def random_sample(lst, n):
+    return random.sample(lst, n)
+
+def cumulative_sum(lst):
+    total = 0
+    result = []
+    for num in lst:
+        total += num
+        result.append(total)
+    return result
+
+cumulative_result = cumulative_sum([1, 2, 3, 4, 5])
+print(cumulative_result)
+
+def most_frequent(lst):
+    return max(set(lst), key=lst.count)
+
+sample_list = [random.randint(1, 10) for _ in range(100)]
+print(most_frequent(sample_list))
+
+def anagrams(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+def to_uppercase(s):
+    return s.upper()
+
+def to_lowercase(s):
+    return s.lower()
+
+def sum_of_squares(n):
+    return sum(i ** 2 for i in range(n + 1))
+
+def sum_of_cubes(n):
+    return sum(i ** 3 for i in range(n + 1))
+
+def is_palindrome(s):
+    return s == s[::-1]
+
+def run_length_encoding(s):
+    encoding = ""
+    i = 0
+    while i
